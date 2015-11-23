@@ -4,7 +4,7 @@ class SessionsHelperTest < ActionView::TestCase
 
   def setup
     @user = users(:michael)
-    remember(@user)
+    @micropost = @user.microposts.build(content: "Lorem ipsum")
   end
 
   test "current_user returns right user when session is nil" do
